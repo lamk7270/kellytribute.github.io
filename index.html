@@ -1,0 +1,113 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Fred Hampton</title>
+	<link rel="stylesheet" href="tributeweb.css">
+</head>
+
+<body>
+	<div id="mySidenav" class="sidenav">
+  		<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  		<a href="#">Gallery</a>
+ 		<a href="#">Childhood</a>
+  		<a href="#">Adulthood/Accomplishments</a>
+  		<a href="#">Death</a>
+	</div>
+	<div id="main">
+  		<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; navigation</span>
+	</div>
+	
+	<div class="title">
+		<h1>Fred Hampton</h1>
+		<h3>The story of a black panther and an upcoming father.</h3>
+	</div>
+	
+	<div class="gallery">
+		<h2>Gallery</h2>
+		
+		<div class="container">
+ 			 <div class="mySlides">
+    		<div class="numbertext">1 / 6</div>
+   				 <img src="1.jpg" style="width:100%">
+ 			 </div>
+
+ 		 <div class="mySlides">
+   			 <div class="numbertext">2 / 6</div>
+   			 <img src="2.jpg" style="width:100%">
+  		</div>
+
+  		<div class="mySlides">
+    		<div class="numbertext">3 / 6</div>
+    		<img src="3.jpg" style="width:100%">
+  		</div>
+    
+  		<div class="mySlides">
+   			 <div class="numbertext">4 / 6</div>
+   			 <img src="4.jpg" style="width:100%">
+  		</div>
+
+  		<div class="mySlides">
+   			 <div class="numbertext">5 / 6</div>
+   			 <img src="5.jpg" style="width:100%">
+ 		 </div>
+    
+  		<div class="mySlides">
+   			 <div class="numbertext">6 / 6</div>
+   			 <img src="6.jpg" style="width:100%">
+ 		 </div>
+    
+  		<a class="prev" onclick="plusSlides(-1)">❮</a>
+  		<a class="next" onclick="plusSlides(1)">❯</a>
+
+  		<div class="caption-container">
+   			 <p id="caption"></p>
+ 		 </div>
+
+ 		 </div>
+	</div>
+	
+	
+
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+}
+	
+	var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
+</body>
+</html>
