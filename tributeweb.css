@@ -1,8 +1,10 @@
 @charset "utf-8";
 /* CSS Document */
-body, .title {
+body, p {
   font-family: "Lato", sans-serif;
+	background:#f1e3dd;
 }
+
 
 .sidenav {
   height: 100%;
@@ -11,7 +13,7 @@ body, .title {
   z-index: 1;
   top: 0;
   left: 0;
-  background-color: #111;
+  background-color: #667292;
   overflow-x: hidden;
   transition: 0.5s;
   padding-top: 60px;
@@ -27,7 +29,7 @@ body, .title {
 }
 
 .sidenav a:hover {
-  color: #f1f1f1;
+color: #f1f1f1;
 }
 
 .sidenav .closebtn {
@@ -51,14 +53,21 @@ body, .title {
 .title{
 	text-align: center;
 	line-height:1.9px;
-	font-size:30px;
+	font-size:35px;
+	background:#bccad6;
 }
 
-.gallery{
+.gallery, h2{
 	text-align:center;
-	font-size:15px;
+	font-size:30px;
+	background:#8d9db6;
 }
 
+p{
+	text-align:center;
+	font-family: "Lato", sans-serif;
+	font-size:20px;
+}
 * {
   box-sizing: border-box;
 }
@@ -100,6 +109,11 @@ img {
   border-radius: 3px 0 0 3px;
 }
 
+.prev{
+	left:0;
+	border-radius: 3px 0 0 3px;
+}
+
 /* On hover, add a black background color with a little bit see-through */
 .prev:hover,
 .next:hover {
@@ -135,12 +149,3 @@ img {
   width: 16.66%;
 }
 
-/* Add a transparency effect for thumnbail images */
-.demo {
-  opacity: 0.6;
-}
-
-.active,
-.demo:hover {
-  opacity: 1;
-}
